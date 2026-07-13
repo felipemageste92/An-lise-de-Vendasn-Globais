@@ -26,7 +26,8 @@ Metodologia
 
 A base de dados de origem (ContosoRetailDW) foi tratada em SQL Server através da criação de views (dbo.V_DimProduct, dbo.V_DimStore, dbo.V_FactSales, entre outras), unindo as tabelas de dimensão de produto (DimProduct, DimProductSubcategory, DimProductCategory) e de loja/geografia (DimStore, DimGeography) já com as colunas necessárias para as análises planejadas, evitando trazer para o Power BI colunas não utilizadas pelo relatório.
 
-<img width="1913" height="974" alt="Criação das views no SQL Server" src="https://github.com/user-attachments/assets/7abe5c73-bb5a-457b-9240-59b55bebf530" />
+<img width="1913" height="974" alt="Views SQL" src="https://github.com/user-attachments/assets/5b60cc8e-918d-4a79-9ec3-355de43ca519" />
+
 
 
 ## 2. Tratamento em Power Query
@@ -67,7 +68,8 @@ O relatório é composto por quatro páginas analíticas, cada uma respondendo a
 
 Visão executiva do desempenho comercial: oito indicadores-chave (Faturamento Total, Lucro Bruto, Lucro Líquido, Margem de Lucro %, Ticket Médio, Quantidade Vendida, Taxa de Devolução %, Perda no Faturamento), um comparativo anual de Faturamento e Lucro Bruto (2007-2009) e uma Curva ABC de marcas.
 
-<img width="1319" height="727" alt="Página 1 - Análise de Vendas" src="https://github.com/user-attachments/assets/0086ad80-a075-43a2-9d71-1b6e6a44cb6e" />
+<img width="1319" height="727" alt="Macro" src="https://github.com/user-attachments/assets/2f5cc895-4012-420b-a453-75a692e14530" />
+
 Indicadores
 
 IndicadorValorFaturamento Total$ 12,41 Bi (-9,0% vs. período anterior)Lucro Bruto$ 7,05 Bi (-9,5%)Lucro Líquido$ 6,69 BiMargem de Lucro %56,78% Ticket Médio $ 3,64 MilQuantidade Vendida 53 Mi de unidadesTaxa de Devolução 0,92%
@@ -90,7 +92,8 @@ Recomenda-se investigar a origem da queda de margem (custo de produto vendido ve
 
 Página de diagnóstico, com objetivo de identificar em que país, marca, categoria e subcategoria a empresa está deixando de faturar. Utiliza um visual de decomposição (drill País → Marca → Categoria → Subcategoria) e um mapa de faturamento por país.
 
-<img width="1071" height="601" alt="Página 2 - Onde Está a Perda" src="https://github.com/user-attachments/assets/2e78226d-0525-46ee-b16d-22f6e472fad5" />
+<img width="1319" height="727" alt="Macro" src="https://github.com/user-attachments/assets/fbc88821-1744-47df-8e1c-a02af0eeeff4" />
+
 Alertas identificados no período completo (2007 vs. 2009)
 
 
@@ -113,7 +116,8 @@ Abrir uma investigação específica sobre o mercado dos Estados Unidos, dado qu
 
 Cruza volume de vendas e margem líquida por categoria de produto, com o objetivo de identificar quais categorias são mais e menos rentáveis, e como a margem líquida varia por país.
 
-<img width="1076" height="603" alt="Página 3 - Análise de Rentabilidade" src="https://github.com/user-attachments/assets/d79caeb3-c207-4054-bc88-45844384e030" />
+<img width="1076" height="603" alt="Rentabilidade" src="https://github.com/user-attachments/assets/055f9e7a-7018-4bb7-bc60-f083cee61e30" />
+
 Indicadores
 
 IndicadorValorLucro Líquido$ 6,69 BiMargem Líquida %53,87%Categoria menos rentávelGames and Toys (51,51%)Categoria mais rentávelMusic, Movies and Audio Books (57,98%)
@@ -134,7 +138,8 @@ Tratar a retenção de clientes na categoria Cameras and camcorders como priorid
 
 Analisa o comportamento de vendas e devolução ao longo dos doze meses do ano, comparando os três anos disponíveis na base (2007, 2008, 2009), com foco no período de pico de vendas de fim de ano.
 
-<img width="1077" height="597" alt="Página 4 - Análise Sazonal" src="https://github.com/user-attachments/assets/fdc181e2-af6e-40f1-8b64-0c7801923019" />
+<img width="1077" height="597" alt="Sazonalidade" src="https://github.com/user-attachments/assets/77d0ae0e-47e1-4faa-bc33-510026fe6f3e" />
+
 Alertas identificados
 
 
