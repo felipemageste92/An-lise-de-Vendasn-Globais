@@ -1,0 +1,19 @@
+Lucro Bruto = [Faturamento Total] - [Total de Custo]
+
+Lucro Líquido = [Faturamento Total] - [Total de Custo] - [Total de Devoluções] - [Total de Descontos]
+
+Lucro YTD = CALCULATE([Lucro Líquido], DATESYTD(dCalendario[Date]))
+
+Margem de Lucro % = DIVIDE([Lucro Bruto], [Faturamento Total], Blank())
+
+Margem Líquida % = DIVIDE([Lucro Líquido], [Faturamento Total], Blank())
+
+Receita Líquida = [Faturamento Total] - [Total de Devoluções] - [Total de Descontos]
+
+Total de Custo = SUM(FactSales[TotalCost])
+
+Alerta Categoria Mais Rentável = 
+VAR Categoria = [Categoria Mais Rentável] 
+VAR Margem = CALCULATE([Margem Líquida %], DimProduct[ProductCategoryName] = Categoria) 
+
+RETURN IF(ISBLANK(Margem), "Sem dados suficientes", Categoria & " (" & FORMAT(Margem, "0.00") & "%)")
